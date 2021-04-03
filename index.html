@@ -1,13 +1,87 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <!-- TODO: Include Font Awesome file here -->
-    <!-- TODO: Include Google Fonts file here -->
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-<body>
-    <!-- TODO: Include all your code for the header and home page here -->
-</body>
+   	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
 
+    <!-- CSS related to Post -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./styles/index.css"
+    />
+
+    <!-- CSS related to header -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./styles/common.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header as a reusable component -->
+    <header-component>
+   <div class="header">
+      <div class="titleContainer">
+        <p class="title">ScriBBler</p>
+        <p class="heading">Explore, Imagine, Create</p>
+      </div>
+	<div class="signInContainer">
+        <button class="signup-btn" onclick="showSignUp()">Sign Up</button>
+        <button class="signin-btn" onclick="showSignIn()">Sign In</button>
+      </div>
+</div>
+    </header-component>
+
+    <!-- Post Button Layout -->
+    <div class="post-btn-container">
+      <button class="post-btn" onclick="loadAllPosts()">All Posts</button>
+      <button class="post-btn" onclick="showCreatePost()">Create Post</button>
+    </div>
+
+    <!-- Create Post Modal -->
+    <div id="createpost-pop-up-modal" class="post-modal">
+      <div class="post-modal-content">
+        <div class="post-modal-head-container">
+          <h2 class="post-modal-title">Pen Your Post</h2>
+          <span class="post-modal-close" onclick="hideCreatePost()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </span>
+        </div>
+        <hr />
+        <form class="post-form">
+          <label for="title" class="post-label-text">Title</label>
+          <input
+            type="text"
+            id="title"
+            placeholder="Enter title of your post"
+            required
+          />
+          <label for="contents" class="post-label-text">Contents</label>
+          <textarea
+            id="contents"
+            placeholder="Enter the contents of your post"
+            required
+          ></textarea>
+          <button type="submit" class="createpost-btn">Create</button>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <!-- Importing JS scripts -->
+  <script src="../scripts/common.js"></script>
+  <script src="../scripts/index.js"></script>
 </html>
