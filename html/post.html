@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head>
+        <link href='..\css\post.css' rel='stylesheet' type='text/css'>
+        <link href='..\css\header.css' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="..\font-awesome-4.7.0/css/font-awesome.min.css">
+        <link href='..\css\font.css' rel='stylesheet' type='text/css'>
+    <style>        
+    </style>
+</head>
+<body onload="myFunction()">
+<div id="main-container-div">
+    <div class="header">
+
+        <!-- Insert code for Sign Up, Sign In button here.
+             Add code for "ScriBBler" heading and the sub-heading -->
+        <a href="../index.html" class="logo">ScriBBler</a>
+        <div class="header-right">
+            <a id="signin" href="#contact" onclick="signinmodal();">Sign In</a>
+            <span></span>
+            <a id="signup" href="#home" onclick="signupmodal();">Sign Up</a>
+        </div>
+    </div>
+    <p class="subheader">Explore, Imagine, Create</p>
+</div>
+<div>
+
+    <!-- Insert code for Sign In modal here -->
+    <div id="myModal1" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span id="close1" class="close">&times;</span>
+            <h2 class="title1">Welcome Back!</h2>
+            <hr size="4">
+            <form action="#" method="post">
+                <div>
+                    <label><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="pass" required>
+
+                    <button id="submit2">Sign In</button>
+                    <br>
+                    <b><span><p align="center">Not a member?&nbsp;<a id="memberoption" onclick="signupmodalMember();">Sign In</a></span></p></b>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+
+        <!-- Insert code for Sign Up modal here -->
+        <div id="myModal2" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span id="close2" class="close">&times;</span>
+                <h2 class="title1">Get Started</h2>
+                <hr size="4">
+                <form action="#" method="post">
+                    <div>
+                        <label><b>Full Name</b></label>
+                        <input type="text" placeholder="Enter Full Name" name="fname" required>
+
+                        <label><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="pass" required>
+
+                        <label><b>Confirm Password</b></label>
+                        <input type="password" placeholder="Confirm Password" name="cpass" required>
+                        <button id="submit">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<section id="section1" class="section">
+    <div class="blogContent">
+        <div id="blogTitle" class="blogTite">
+        <h id="blogTitleNew">Everything you should know about ‘module’ & ‘require’ in Node.js</h>
+    </div>
+
+<div class="blogAuthor">
+
+    <!-- Insert code for Edit/Save button and  -->
+   <!-- <input type="button" class="" id="save" name="save" value="save">-->
+    <input type="button" class="buttonstyle" id="edit" name="edit" value="Edit" onclick="editContent();">
+    <input type="button" class="buttonstyle" id="save" name="save" value="Save" onclick="saveContent();">
+    <p>Srishti Gupta</p>
+</div>
+
+<div class="blogText">
+    <p id="blogBody" contenteditable="false">
+        Node.js treats each JavaScript file as a separate module. For
+          instance, if you have a file containing some code and this file is
+          named xyz.js, then this file is treated as a module in Node, and you
+          there should be a cursor which would enable the user to edit/erase/add
+          any text he/she wants in it. While the post title & text are in the
+          editable mode, the "Edit" button should be replaced by the "Save"
+          button, having the icon named "Save" displayed after the text in the
+          button. Node.js treats each JavaScript file as a separate module. For
+          instance, if you have a file containing some code and this file is
+          named xyz.js, then this file is treated as a module in Node, and you
+          there should be a cursor which would enable the user to edit/erase/add
+          any text he/she wants in it. While the post title & text are in the
+          editable mode, the "Edit" button should be replaced by the "Save"
+          button, having the icon named "Save" displayed after the text in the
+          button. Node.js treats each JavaScript file as a separate module. For
+          instance, if you have a file containing some code and this file is
+          named xyz.js, then this file is treated as a module in Node, and you
+          there should be a cursor which would enable the user to edit/erase/add
+          any text he/she wants in it. While the post title & text are in the
+          editable mode, the "Edit" button should be replaced by the "Save"
+          button, having the icon named "Save" displayed after the text in the
+          button.</p>
+</div>
+    </div>
+    <br/>
+    <!-- Insert code for Like button, Comment button, Comment box here-->
+    <input type="button" class="buttonLike" id="like" name="like" value="Like" onclick="likeAction();">
+    <p id="likeStatus">Be the first one to like this!</p>
+    <br>
+    <div>
+    <textarea id="commenttext" name="comment" placeholder="Leave a comment..."></textarea>
+    </div>
+    <input type="button" class="buttonComment" id="comment" name="comment" value="Comment" onclick="commentAction();">
+    <br>
+    <h3>All Comments</h3>
+    <section>
+    <div id="commentbox" class="commentbox">
+    </div>
+    </section>
+</section>
+    <script src="..\js\post.js" defer></script>
+    <script src="..\js\header.js">
+    </script>
+</body>
